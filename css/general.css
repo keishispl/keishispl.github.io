@@ -1,5 +1,5 @@
-@import "https://fonts.googleapis.com/css2?family=Pixelify+Sans&family=Raleway:wght@300&display=swap";html {
-    font-family: 'Pixelify Sans', sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@600&family=Exo+2&family=Noto+Sans+JP:wght@500&display=swap');html {
+    font-family: 'Noto Sans JP';
     -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%
 }
@@ -7,31 +7,10 @@
     cursor: default !important;
 }
 .general {
-    background: url('floundering_heights.jpeg');
+    background: url('background.jpg');
     background-size: cover;
     background-position: center;
     background-repeat; no-repeat;
-    height: 100%;
-    margin: 0;
-    justify-content: center;
-    text-align: center;
-}
-.grass {
-    background: url('grass.jpeg');
-    background-size: cover;
-    background-position: center;
-    background-repeat; no-repeat;
-    height: 100%;
-    margin: 0;
-    justify-content: center;
-    text-align: center;
-}
-.coding {
-    background: url('codin.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat; no-repeat;
-    height: 100%;
     margin: 0;
     justify-content: center;
     text-align: center;
@@ -43,6 +22,21 @@
 .column {
   flex: 66.66%;
   padding: 0px;
+}
+p.mid2 {
+  overflow: hidden;
+  text-align: center;
+}
+
+p.mid2::before,
+p.mid2::after {
+  background-color: white;
+  content: "";
+  display: inline-block;
+  height: 1px;
+  position: relative;
+  vertical-align: middle;
+  width: 50%;
 }
 html,
 body {
