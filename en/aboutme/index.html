@@ -1,0 +1,110 @@
+<html>
+<head>
+    <title>Kacey's Card</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+
+    <meta name="theme-color" content="#FEF2E8">
+    <meta content="../../css/profile.png" property="og:image">
+    <link rel="icon" href="../../css/profile.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../../css/profile.png">
+    <link rel="manifest" href="https://www.bulzyland.xyz/assets/icons/site.webmanifest">
+    <meta content="Kacey's Card" property="og:title">
+    <meta content="Just a card website" property="og:description">
+    <meta content="Just a card website" name="description">
+    <meta name="revisit-after" content="2 days">
+    <meta property="og:locale" content="en">
+    <link rel="canonical" href="https://kouciana.github.io/">
+    <meta property="og:url" content="https://koucina.github.io/">
+    <meta property="og:site_name" content="Kacey">
+
+    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans&family=Raleway:wght@300&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" type="text/css" rel="stylesheet">
+    <link href="../../css/general.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+<div id="top" class="general">
+    <br>
+    <form style="justify-content: right">
+        <select style="justify-content: right" id="lang-switch">
+            <option value="en" selected>English</option>
+            <option value="jp">日本話</option>
+        </select>
+    </form>
+    <br><br><br><br><br><br><br><br><br><h1 class="title monospace">Video Games</h1>
+    <h5>I play video games like...</h5>
+    <div class="row">
+        <div class="column">
+            <a href="https://www.minecraft.net" target="_blank"><img src="../../css/minecraft.png" class="image-title"></a>
+            <div class="unset">
+                <p class="title monospace"><a href="https://www.minecraft.net" target="_blank">Minecraft</a></p>
+            </div>
+        </div>
+        <div class="column">
+            <a href="https://splatoon.nintendo.com/" target="_blank"><img src="../../css/sq.jpg" class="image-title"></a>
+            <div class="unset">
+                <p class="title monospace"><a href="https://splatoon.nintendo.com/" target="_blank">Splatoon</a></p>
+            </div>
+        </div>
+        <div class="column">
+            <a href="https://www.colorfulstage.com/" target="_blank"><img src="../../css/cstage.png" class="image-title"></a>
+            <div class="unset">
+                <p class="title monospace"><a href="https://www.colorfulstage.com/" target="_blank">Colorful Stage</a></p>
+            </div>
+        </div>
+    </div>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <p id="code" class="mid2"></p>
+    <br><br><br><br><br><br><br><br><br><br><br><br>
+    <h1 class="title monospace">Programming</h1>
+    <h5>My coding languages...</h5>
+    <div class="row">
+        <div class="column">
+            <a href="https://olyno.github.io/skript-website/" target="_blank"><img src="../../css/sk.png" class="image-title"></a>
+            <div class="unset">
+                <p class="title monospace"><a href="https://olyno.github.io/skript-website/" target="_blank">Skript</a></p>
+            </div>
+        </div>
+        <div class="column">
+            <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank"><img src="../../css/html.png" class="image-title"></a>
+            <div class="unset">
+                <p class="title monospace"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank">HTML</a></p>
+            </div>
+        </div>
+        <div class="column">
+            <a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank"><img src="../../css/css.png" class="image-title"></a>
+            <div class="unset">
+                <p class="title monospace"><a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank">CSS</a></p>
+            </div>
+        </div>
+        <div class="column">
+            <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank"><img src="../../css/js.png" class="image-title"></a>
+            <div class="unset">
+                <p class="title monospace"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">JavaScript</a></p>
+            </div>
+        </div>
+    </div>
+    <br><br><br><br><br><br><br><br><br><br><br>
+    <a href="../">Main Page</a>
+    <br><br>
+</div>
+<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+<script>
+    $('[lang]').hide();
+    $('[lang="jp"]').show();
+    $('#lang-switch').change(function () {
+        var lang = $(this).val();
+        switch (lang) {
+            case 'jp':
+                window.location = "../../aboutme"
+            break;
+            case 'en':
+                window.location = "./"
+            break;
+            default:
+                window.location = "./"
+            }
+    });
+</script>
+</body>
+</html>

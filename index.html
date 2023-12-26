@@ -1,4 +1,5 @@
-<html><head>
+<html>
+<head>
     <title>ケイシのカード</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
@@ -22,10 +23,8 @@
     <link href="css/general.css" type="text/css" rel="stylesheet">
 </head>
 <body>
-
 <div id="top" class="general">
-    <h6><a href="en">Japanese Version 日本語版</a></h6>
-    <br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br>
     <img draggable="false" style="width: 100px; height: 100px;" src="css/profile.png" loading="lazy" data-scanned="true">
     <div class="unset">
         <h1 class="title monospace">ケイシ</h1>
@@ -38,71 +37,36 @@
     </div>
     <br><br>
     <div class="buttons">
-        <a href="maidkouciana/jp" class="btn github-dropshadow animation hover" target="_blank">メイドKouciana</a>
-        <a href="cyanplex" class="btn github-dropshadow animation hover" target="_blank">CyanPlex</a>
-        <a href="splatmaps" class="btn github-dropshadow animation hover" target="_blank">SplatMaps (廃止)</a>
+        <a href="maidkouciana/jp" class="btn github-dropshadow animation hover" target="_blank">メイドコウシアな</a>
+        <a href="cyanplex" class="btn github-dropshadow animation hover" target="_blank">さんぷぇぃと</a>
+        <a href="splatmaps" class="btn github-dropshadow animation hover" target="_blank">ぐちゃ地図 (廃止)</a>
     </div>
-    <br><br><br><br><br><br><br><br><br><br><br><br>
-    <p id="games" class="mid2"></p>
-    <br><br><br><br><br><br><br><br><br><br><br><br>
-    <h1 class="title monospace">ゲーム</h1>
-    <h5>私は次のようなビデオゲームをします...</h5>
-    <div class="row">
-        <div class="column">
-            <a href="https://www.minecraft.net" target="_blank"><img src="css/minecraft.png" class="image-title"></a>
-            <div class="unset">
-                <p class="title monospace"><a href="https://www.minecraft.net" target="_blank">マインクラフト</a></p>
-            </div>
-        </div>
-        <div class="column">
-            <a href="https://splatoon.nintendo.com/" target="_blank"><img src="css/sq.jpg" class="image-title"></a>
-            <div class="unset">
-                <p class="title monospace"><a href="https://splatoon.nintendo.com/" target="_blank">スプラトゥーン</a></p>
-            </div>
-        </div>
-    </div>
-    <br><br><br><br><br><br><br><br><br><br><br><br><br>
-    <p id="code" class="mid2"></p>
-    <br><br><br><br><br><br><br><br><br><br><br><br>
-    <h1 class="title monospace">コーディング</h1>
-    <h5>私のプログラミング言語は...</h5>
-    <div class="row">
-        <div class="column">
-            <a href="https://olyno.github.io/skript-website/" target="_blank"><img src="css/sk.png" class="image-title"></a>
-            <div class="unset">
-                <p class="title monospace"><a href="https://olyno.github.io/skript-website/" target="_blank">Skript</a></p>
-            </div>
-        </div>
-        <div class="column">
-            <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank"><img src="css/html.png" class="image-title"></a>
-            <div class="unset">
-                <p class="title monospace"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank">HTML</a></p>
-            </div>
-        </div>
-        <div class="column">
-            <a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank"><img src="css/css.png" class="image-title"></a>
-            <div class="unset">
-                <p class="title monospace"><a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank">CSS</a></p>
-            </div>
-        </div>
-        <div class="column">
-            <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank"><img src="css/js.png" class="image-title"></a>
-            <div class="unset">
-                <p class="title monospace"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">JavaScript</a></p>
-            </div>
-        </div>
-    </div>
-    <br><br><br><br><br><br><br><br><br><br><br><br><br>
-    <p class="mid2"></p>
-    <br>
-    <a href="#top">このページのトップへ</a>
-    <br>
-    <a href="#games">ゲーム</a>
-    <br>
-    <a href="#code">コーディング</a>
+    <br><br><br><br><br><br><br><br><br>
+    <a href="aboutme">詳細情報</a>
     <br><br>
-    <p><a href="https://github.com/kouciana" style="text-decoration: underline; color: red;" target="_blank">ケイシ</a>作</p>
-    <br>
-</div>
+    <form style="justify-content: right">
+        <select style="justify-content: right" id="lang-switch">
+            <option value="en">English</option>
+            <option value="jp" selected>日本話</option>
+        </select>
+    </form>
+<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+<script>
+    $('[lang]').hide();
+    $('[lang="jp"]').show();
+    $('#lang-switch').change(function () {
+        var lang = $(this).val();
+        switch (lang) {
+            case 'jp':
+                window.location = "./"
+            break;
+            case 'en':
+                window.location = "./en"
+            break;
+            default:
+                window.location = "./"
+            }
+    });
+</script>
 </body>
 </html>

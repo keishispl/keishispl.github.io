@@ -6,11 +6,38 @@
 * {
     cursor: default !important;
 }
-.general {
-    background: url('background.png');
+body {
+    background-image: url('floundering_heights.jpeg');
     background-size: cover;
     background-position: center;
     background-repeat; no-repeat;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    font-weight: normal;
+    margin: 0;
+}
+/* width */
+::-webkit-scrollbar {
+  width: 0px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: transparent;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: transparent;
+}
+.general {
+    background: transparent
     margin: 0;
     justify-content: center;
     text-align: center;
@@ -37,15 +64,6 @@ p.mid2::after {
   position: relative;
   vertical-align: middle;
   width: 50%;
-}
-html,
-body {
-    background: #181818;
-    align-items: center;
-    text-align: center;
-    color: #fff;
-    font-weight: normal;
-    margin: 0;
 }
 .avatar-container {
     max-width: 100%;
