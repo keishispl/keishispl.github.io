@@ -2559,6 +2559,7 @@ input[type="submit"].marine-blue-dropshadow {
     -moz-transition: filter 350ms ease;
     -o-transition: filter 350ms ease;
 }
+
 .btn.marine-blue-dropshadow:hover,
 input[type="submit"].marine-blue-dropshadow:hover {
     filter: drop-shadow(5px 5px 0 rgba(6, 82, 221, 0.6)) brightness(50%);
