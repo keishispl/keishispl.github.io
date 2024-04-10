@@ -6,8 +6,8 @@
 
     <meta name="theme-color" content="#FEF2E8">
     <meta content="css/profile.png" property="og:image">
-    <link rel="icon" href="../img/profile.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="../img/profile.png">
+    <link rel="icon" href="../../img/profile.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../../img/profile.png">
     <link rel="manifest" href="https://www.bulzyland.xyz/assets/icons/site.webmanifest">
     <meta content="Keishi's Card" property="og:title">
     <meta content="Just a card website" property="og:description">
@@ -20,7 +20,7 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans&family=Raleway:wght@300&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" type="text/css" rel="stylesheet">
-    <link href="../general.css" type="text/css" rel="stylesheet">
+    <link href="../../general.css" type="text/css" rel="stylesheet">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@600&family=Exo+2&family=Noto+Sans+JP:wght@500&family=Noto+Sans+TC&display=swap');
 
@@ -34,48 +34,25 @@
 <body>
 <div id="top" class="general">
     <br><br><br><br><br><br><br><br><br><br>
-    <img draggable="false" style="width: 100px; height: 100px;" src="../img/profile.png" loading="lazy" data-scanned="true">
+    <img draggable="false" style="width: 100px; height: 100px;" src="../../img/profile.png" loading="lazy" data-scanned="true">
     <div class="unset">
         <h2>Keishi</h2>
     </div>
     <p>Card Website</p>
     <div class="buttons">
-        <a href="links" class="btn">Links</a>
-        <a href="sns" class="btn">SNS</a>
+        <a href="../links" class="btn">Links</a>
+        <a href="../sns" class="btn">SNS</a>
     </div>
     <div class="buttons">
-        <a href="art" class="btn">Art</a>
-        <a href="programming" style="font-size:12.5px;" class="btn">Programming</a>
+        <a href="../" class="btn selected">Home</a>
+        <a href="../programming" style="font-size:12.5px;" class="btn">Programming</a>
     </div>
     <div class="buttons">
-        <a href="games" class="btn">Games</a>
+        <a href="../games" class="btn">Games</a>
         <a href="" class="btn">Nothing</a>
     </div>
     <br><br>
-    <form style="justify-content: right">
-        <select style="justify-content: right" id="lang-switch">
-            <option value="en" selected>English</option>
-            <option value="jp">日本話</option>
-        </select>
-    </form>
-<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
-<script>
-    $('[lang]').hide();
-    $('[lang="jp"]').show();
-    $('#lang-switch').change(function () {
-        var lang = $(this).val();
-        switch (lang) {
-            case 'jp':
-                window.location = "../jp"
-            break;
-            case 'en':
-                window.location = "./"
-            break;
-            default:
-                window.location = "./"
-            }
-    });
-</script>
+    <h5>This page is not completed. We are sorry for the inconvenience</h5>
 </div>
 </body>
 </html>
