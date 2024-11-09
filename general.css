@@ -1,13 +1,57 @@
 * {
     cursor: default !important;
 }
+
+::-moz-selection {
+    color: white;
+    background: rgba(0, 0, 168, 0.22);
+}
+::selection {
+    color: white;
+    background: rgba(0, 0, 168, 0.22);
+}
+
+.centerpage {
+    border: transparent;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px;
+  }
+
+.bottom { 
+    position: absolute; 
+    bottom: 10px;
+}
+
+.middle {
+    align-self: center;
+    left: 0%;
+    right: 0%;
+}
+
+.right { 
+    position: absolute;
+    right: 10px;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 2px;
+    border-radius: 6px; /* Optional: rounded corners */ 
+} 
+
+.left { 
+    position: absolute;
+    left: 10px;
+    bottom: 0px;
+} 
+
 body {
+    overscroll-behavior: none;
     background-image: url('img/wallpaper/self_drawn.png');
     background-size: cover;
     background-position: center right;
-    background-repeat; no-repeat;
+    background-repeat: no-repeat;
     background-attachment: fixed;
-    max-background-height: 100%;
     align-items: center;
     text-align: center;
     color: #fff;
@@ -34,7 +78,7 @@ body {
   background: transparent;
 }
 .general {
-    background: transparent
+    background: transparent;
     margin: 0;
     justify-content: center;
     text-align: center;
@@ -1610,7 +1654,7 @@ button {
     height: 40px;
     line-height: 38px;
     margin: 0.5em;
-    width: 105px;
+    width: 75px;
     text-align: center;
     text-decoration: none;
     white-space: nowrap;
