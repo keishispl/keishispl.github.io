@@ -3,7 +3,12 @@
      "category_home": "ホーム",
      "category_intro": "自己紹介",
      "category_social": "SNS",
+     "category_website": "サイト",
      "name": "圭紫",
      "furigana": "ケイ&nbsp;シ&nbsp;",
-     "intro": "私は独学のコーダーです。私は学校に在学中で、空き時間にコーディングしています。"
+     "intro": "私は独学のコーダーです。私は学校に在学中で、空き時間にコーディングしています。",
+     "japbdict": "初心者日本語辞典",
+     "taikofumen": "太鼓創作譜面",
+     "speedrun": "タイムアタックゲーム",
+     "maidkouciana": "メイドコウシアナ"
 }

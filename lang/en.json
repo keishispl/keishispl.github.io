@@ -3,7 +3,12 @@
      "category_home": "Home",
      "category_intro": "Introduction",
      "category_social": "Socials",
+     "category_website": "Website",
      "name": "Keishi",
      "furigana": "&nbsp;",
-     "intro": "I'm a self-taught developer. And I do coding in my spare time, as I have school."
+     "intro": "I'm a self-taught developer. And I do coding in my spare time, as I have school.",
+     "japbdict": "JAP B-DICT",
+     "taikofumen": "Taiko Charts",
+     "speedrun": "Speedrun Game",
+     "maidkouciana": "MaidKouciana"
 }

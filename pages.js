@@ -1,6 +1,7 @@
 const all = [
      "intro",
-     "social"
+     "social",
+     "website"
 ];
 shown = "";
 
