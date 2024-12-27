@@ -9,7 +9,6 @@
     <meta content="./img/profile.png" property="og:image">
     <link rel="icon" href="./img/profile.png">
     <link rel="apple-touch-icon" sizes="180x180" href="./img/profile.png">
-    <link rel="manifest" href="https://www.bulzyland.xyz/assets/icons/site.webmanifest">
     <meta content="圭紫のカード" property="og:title">
     <meta content="ただのカードサイト" property="og:description">
     <meta content="ただのカードサイト" name="description">
@@ -27,30 +26,39 @@
 
 <body>
     <div id="top" class="general">
-        <div class="centerpage">
-            <img draggable="false" style="width: 100px; height: 100px; border-radius:50%; box-shadow: 0 0 15px 3px gray;" src="./img/profile.png" loading="lazy"
-                data-scanned="true">
+        <div class="centerpage" style="z-index: 1;">
+            <img draggable="false"
+                style="width: 100px; height: 100px; border-radius:50%; box-shadow: 0 0 15px 3px gray;"
+                src="./img/profile.png" loading="lazy" data-scanned="true">
             <div style="padding-top: 20px;"></div>
             <div class="unset">
-                <h2 id="name">圭紫</h2>
-                <h5 id="furigana" style="margin-top: -20px;">（ケイシ）</h5>
+                <p id="furigana" style="margin-bottom: -20px;"></p>
+                <h2 id="name"></h2>
             </div>
-            <div style="padding-top: 50px;"></div>
-            <div class="buttons" style="left: 0%; right: 0%; top: 0%; bottom: 0%;">
-                <a href="https://www.youtube.com/@keishispl" class="btn" target="_blank">&nbsp;<i
-                        class="fab fa-youtube"></i>&nbsp;</a>
-                <a href="https://twitter.com/keishispl" class="btn" target="_blank">&nbsp;<i
-                        class="fab fa-x-twitter"></i>&nbsp;</a>
-                <a href="https://bsky.app/profile/keishispl.bsky.social" class="btn" target="_blank">&nbsp;<i
-                        class="fab fa-bluesky"></i>&nbsp;</a>
-                <a href="https://discord.gg/tEcEGxugKt" class="btn" target="_blank">&nbsp;<i
-                        class="fab fa-discord"></i>&nbsp;</a>
-                <a href="https://github.com/keishispl" class="btn" target="_blank">&nbsp;<i
-                        class="fab fa-github"></i>&nbsp;</a>
+            <div style="padding-bottom: 100px;"></div>
+            <a id="category_intro" class="btn long"></a>
+            <a id="category_social" class="btn long"></a>
+        </div>
+        <div class="centerpage">
+            <div style="padding-top: 500px;"></div>
+            <div id="category_intro-div">
+                <p style="font-size: 20px; padding-top: 10px;" id="intro"></p>
+            </div>
+            <div id="category_social-div">
+                <div class="buttons" style="left: 0%; right: 0%; top: 0%; bottom: 0%;">
+                    <a href="https://www.youtube.com/@keishispl" class="btn" target="_blank">&nbsp;<i
+                            class="fab fa-youtube"></i>&nbsp;</a>
+                    <a href="https://twitter.com/keishispl" class="btn" target="_blank">&nbsp;<i
+                            class="fab fa-x-twitter"></i>&nbsp;</a>
+                    <a href="https://bsky.app/profile/keishispl.bsky.social" class="btn" target="_blank">&nbsp;<i
+                            class="fab fa-bluesky"></i>&nbsp;</a>
+                    <a href="https://github.com/keishispl" class="btn" target="_blank">&nbsp;<i
+                            class="fab fa-github"></i>&nbsp;</a>
+                </div>
             </div>
         </div>
         <div class="bottom middle">
-            <p style="font-size:30px;" id="location">ホーム</p>
+            <p style="font-size:30px;" id="location"></p>
         </div>
         <div class="bottom left">
             <form>
@@ -60,11 +68,55 @@
                 </select>
             </form>
         </div>
-        <div class="bottom right"><a target="_blank" href="https://www.deviantart.com/u-joe"
-                id="illustration">イラスト：U-Joe</a></div>
+        <div class="bottom right"><a target="_blank" href="https://www.deviantart.com/u-joe" id="illustration"></a>
+        </div>
 
         <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
-        <script src="index.js"></script>
+        <script src="pages.js"></script>
+        <script>
+            function langFunction(json) {
+                for (let key in json) {
+                    if (!key.includes('home')) {
+                        document.getElementById(key).innerHTML = json[key];
+                    }
+                }
+            }
+
+            $('[lang]').hide();
+            $('[lang="jp"]').show();
+
+            var request = new XMLHttpRequest();
+            request.open("GET", "../lang/ja.json", false);
+            request.send(null)
+            var jsonJP = JSON.parse(request.responseText);
+            langFunction(jsonJP);
+
+            $('#lang-switch').change(function () {
+                var request = new XMLHttpRequest();
+                request.open("GET", "../lang/ja.json", false);
+                request.send(null)
+                var jsonJP = JSON.parse(request.responseText);
+
+                var request = new XMLHttpRequest();
+                request.open("GET", "../lang/en.json", false);
+                request.send(null)
+                var jsonEN = JSON.parse(request.responseText);
+
+                var lang = $(this).val();
+                switch (lang) {
+                    case 'jp':
+                        langFunction(jsonJP);
+                        changeText(shown)
+                        break;
+                    case 'en':
+                        langFunction(jsonEN);
+                        changeText(shown)
+                        break;
+                    default:
+                        window.location = "./"
+                }
+            });
+        </script>
     </div>
 </body>
 

@@ -11,6 +11,15 @@
     background: rgba(0, 0, 168, 0.22);
 }
 
+.is-active {
+    font-weight: bold;
+    background: rgba(200, 200, 200, 0.25);
+}
+
+.is-hidden {
+    display: none;
+}
+
 .centerpage {
     border: transparent;
     position: absolute;
@@ -41,7 +50,7 @@
 
 .left { 
     position: absolute;
-    left: 10px;
+    left: 15px;
     bottom: 0px;
 } 
 
@@ -82,6 +91,10 @@ body {
     margin: 0;
     justify-content: center;
     text-align: center;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 .row {
   display: flex;
@@ -115,6 +128,7 @@ h2,
 h3,
 h4,
 h5,
+#furigana,
 h6 {
     margin-bottom: 2rem;
     margin-top: 0;
@@ -181,7 +195,7 @@ h4 {
     letter-spacing: -0.08rem;
     line-height: 1.35;
 }
-h5 {
+h5, #furigana {
     font-size: 1.7rem;
     letter-spacing: -0.05rem;
     line-height: 1.5;
@@ -204,7 +218,7 @@ h6 {
     h4 {
         font-size: 2.7rem;
     }
-    h5 {
+    h5, #furigana {
         font-size: 2.1rem;
     }
     h6 {
@@ -1665,6 +1679,9 @@ button {
 }
 .long {
     width: 150px;
+}
+.mid {
+    width: 100px;
 }
 .easysee {
     background-color: rgba(50, 50, 50, 0.5);

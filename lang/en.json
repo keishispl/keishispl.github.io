@@ -1,6 +1,9 @@
 {
      "illustration": "Illustration: U-Joe",
-     "location": "Home",
+     "category_home": "Home",
+     "category_intro": "Introduction",
+     "category_social": "Socials",
      "name": "Keishi",
-     "furigana": "(Kacey)"
+     "furigana": "&nbsp;",
+     "intro": "I'm a self-taught developer. And I do coding in my spare time, as I have school."
 }

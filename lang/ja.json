@@ -1,6 +1,9 @@
 {
      "illustration": "イラスト：U-Joe",
-     "location": "ホーム",
+     "category_home": "ホーム",
+     "category_intro": "自己紹介",
+     "category_social": "SNS",
      "name": "圭紫",
-     "furigana": "（ケイシ）"
+     "furigana": "ケイ&nbsp;シ&nbsp;",
+     "intro": "私は独学のコーダーです。私は学校に在学中で、空き時間にコーディングしています。"
 }
