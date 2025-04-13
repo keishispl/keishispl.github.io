@@ -6,8 +6,7 @@ const all = [
 shown = "";
 
 function changeText(string) {
-     var lang = $('#lang-switch').val();
-     if (lang === 'jp') {
+     if (lang === 'ja') {
           var request = new XMLHttpRequest();
           request.open("GET", "../lang/ja.json", false);
           request.send(null)
@@ -19,14 +18,6 @@ function changeText(string) {
           var json = JSON.parse(request.responseText);
      }
      for (key in json) {
-          if (string === "") {
-               document.getElementById(`location`).innerHTML = json.category_home;
-               return;
-          }
-          if (!all.includes(shown)) {
-               document.getElementById(`location`).innerHTML = json.category_home;
-               return;
-          }
           if (key === `category_${string}`) {
                document.getElementById(`location`).innerHTML = json[key];
                return;

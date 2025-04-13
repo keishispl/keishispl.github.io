@@ -74,12 +74,12 @@
             </div>
         </div>
         <div class="bottom middle">
-            <p style="font-size:30px;" id="location"></p>
+            <p style="font-size:30px;" id="categori_home"></p>
         </div>
         <div class="bottom left">
             <form>
                 <select id="lang-switch">
-                    <option value="jp" selected>日本話</option>
+                    <option value="ja" selected>日本話</option>
                     <option value="en">English</option>
                 </select>
             </form>
@@ -88,51 +88,8 @@
         </div>
 
         <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+        <script src="language.js"></script>
         <script src="pages.js"></script>
-        <script>
-            function langFunction(json) {
-                for (let key in json) {
-                    if (!key.includes('home')) {
-                        document.getElementById(key).innerHTML = json[key];
-                    }
-                }
-            }
-
-            $('[lang]').hide();
-            $('[lang="jp"]').show();
-
-            var request = new XMLHttpRequest();
-            request.open("GET", "../lang/ja.json", false);
-            request.send(null)
-            var jsonJP = JSON.parse(request.responseText);
-            langFunction(jsonJP);
-
-            $('#lang-switch').change(function () {
-                var request = new XMLHttpRequest();
-                request.open("GET", "../lang/ja.json", false);
-                request.send(null)
-                var jsonJP = JSON.parse(request.responseText);
-
-                var request = new XMLHttpRequest();
-                request.open("GET", "../lang/en.json", false);
-                request.send(null)
-                var jsonEN = JSON.parse(request.responseText);
-
-                var lang = $(this).val();
-                switch (lang) {
-                    case 'jp':
-                        langFunction(jsonJP);
-                        changeText(shown)
-                        break;
-                    case 'en':
-                        langFunction(jsonEN);
-                        changeText(shown)
-                        break;
-                    default:
-                        window.location = "./"
-                }
-            });
-        </script>
     </div>
 </body>
 
