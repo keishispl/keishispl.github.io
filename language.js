@@ -21,8 +21,6 @@ for (let i = 0; i < languages.length; i++) {
      document.getElementById("lang-switch").appendChild(option)
 }
 
-console.log(languagesTITLE)
-
 const urlParams = new URLSearchParams(window.location.search)
 if (languagesSF.includes(urlParams.get('lang'))) {
      var lang = urlParams.get('lang')
@@ -84,6 +82,6 @@ $('#lang-switch').change(function () {
      changeText(shown, json)
      document.cookie = `lang=${switchedLang};`
      lang = switchedLang;
-     
+
      document.title = languagesTITLE[languagesSF.findIndex((obj) => obj === lang)]
 });
