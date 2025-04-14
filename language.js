@@ -1,23 +1,27 @@
 const s = "_"
 
 const languages = [
-     `ja${s}日本語`,
-     `en${s}English`,
-     `zh-td${s}繁體中文`,
-     `zh-hk${s}廣東話`
+     `ja${s}日本語${s}圭紫のカード`,
+     `en${s}English${s}Keishi's Card`,
+     `zh-td${s}繁體中文${s}Kacey的網站`,
+     `zh-hk${s}廣東話${s}Kacey嘅網頁`
 ]
 
 const languagesSF = []
 const languagesNM = []
+const languagesTITLE = []
 for (let i = 0; i < languages.length; i++) {
      languagesSF.push(languages[i].split(s)[0])
-     languagesNM.push(languages[i].split(s)[1])
+     languagesNM.push(languages[i].split(s)[1].split(s)[0])
+     languagesTITLE.push(languages[i].split(s)[2])
 
      var option = document.createElement('option')
      option.value = languages[i].split(s)[0]
-     option.innerHTML = languages[i].split(s)[1]
+     option.innerHTML = languages[i].split(s)[1].split(s)[0]
      document.getElementById("lang-switch").appendChild(option)
 }
+
+console.log(languagesTITLE)
 
 const urlParams = new URLSearchParams(window.location.search)
 if (languagesSF.includes(urlParams.get('lang'))) {
@@ -67,6 +71,7 @@ request.send(null)
 langFunction(JSON.parse(request.responseText));
 
 document.getElementById('lang-switch').selectedIndex = languagesSF.findIndex((obj) => obj === lang)
+document.title = languagesTITLE[languagesSF.findIndex((obj) => obj === lang)]
 
 $('#lang-switch').change(function () {
      var switchedLang = $(this).val();
@@ -79,4 +84,6 @@ $('#lang-switch').change(function () {
      changeText(shown, json)
      document.cookie = `lang=${switchedLang};`
      lang = switchedLang;
+     
+     document.title = languagesTITLE[languagesSF.findIndex((obj) => obj === lang)]
 });
