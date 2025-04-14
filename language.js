@@ -1,5 +1,26 @@
+const s = "_"
+
+const languages = [
+     `ja${s}日本語`,
+     `en${s}English`,
+     `zh-td${s}繁體中文`,
+     `zh-hk${s}廣東話`
+]
+
+const languagesSF = []
+const languagesNM = []
+for (let i = 0; i < languages.length; i++) {
+     languagesSF.push(languages[i].split(s)[0])
+     languagesNM.push(languages[i].split(s)[1])
+
+     var option = document.createElement('option')
+     option.value = languages[i].split(s)[0]
+     option.innerHTML = languages[i].split(s)[1]
+     document.getElementById("lang-switch").appendChild(option)
+}
+
 const urlParams = new URLSearchParams(window.location.search)
-if (urlParams.get('lang') === "ja" || urlParams.get('lang') === "en") {
+if (languagesSF.includes(urlParams.get('lang'))) {
      var lang = urlParams.get('lang')
      document.cookie = `lang=${urlParams.get('lang')};`
      history.pushState(null, "", location.href.split("?")[0]);
@@ -17,7 +38,7 @@ if (urlParams.get('lang') === "ja" || urlParams.get('lang') === "en") {
                     return c.substring(name.length, c.length);
                }
           }
-          return "ja";
+          return languagesSF[0];
      }
 
      var lang = getCookie("lang")
@@ -26,7 +47,14 @@ if (urlParams.get('lang') === "ja" || urlParams.get('lang') === "en") {
 
 function langFunction(json) {
      for (let key in json) {
-          document.getElementById(key).innerHTML = json[key];
+          if (json[key].trim().length > 0) {
+               document.getElementById(key).innerHTML = json[key];
+          } else {
+               var request = new XMLHttpRequest();
+               request.open("GET", `../lang/${languagesSF[0]}.json`, false);
+               request.send(null)
+               document.getElementById(key).innerHTML = JSON.parse(request.responseText)[key];
+          }
      }
 }
 
@@ -38,35 +66,17 @@ request.open("GET", `../lang/${lang}.json`, false);
 request.send(null)
 langFunction(JSON.parse(request.responseText));
 
-if (lang == "ja") document.getElementById('lang-switch').selectedIndex = 0;
-if (lang == "en") document.getElementById('lang-switch').selectedIndex = 1;
+document.getElementById('lang-switch').selectedIndex = languagesSF.findIndex((obj) => obj === lang)
 
 $('#lang-switch').change(function () {
+     var switchedLang = $(this).val();
      var request = new XMLHttpRequest();
-     request.open("GET", "../lang/ja.json", false);
+     request.open("GET", `../lang/${switchedLang}.json`, false);
      request.send(null)
-     var jsonJA = JSON.parse(request.responseText);
+     var json = JSON.parse(request.responseText);
 
-     var request = new XMLHttpRequest();
-     request.open("GET", "../lang/en.json", false);
-     request.send(null)
-     var jsonEN = JSON.parse(request.responseText);
-
-     var lang2 = $(this).val();
-     switch (lang2) {
-          case 'ja':
-               langFunction(jsonJA);
-               changeText(shown)
-               document.cookie = "lang=ja;"
-               lang = "ja"
-               break;
-          case 'en':
-               langFunction(jsonEN);
-               changeText(shown)
-               document.cookie = "lang=en;"
-               lang = "en"
-               break;
-          default:
-               window.location = "./"
-     }
+     langFunction(json);
+     changeText(shown, json)
+     document.cookie = `lang=${switchedLang};`
+     lang = switchedLang;
 });

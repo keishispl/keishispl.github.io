@@ -5,21 +5,17 @@ const all = [
 ];
 shown = "";
 
-function changeText(string) {
-     if (lang === 'ja') {
-          var request = new XMLHttpRequest();
-          request.open("GET", "../lang/ja.json", false);
-          request.send(null)
-          var json = JSON.parse(request.responseText);
-     } else if (lang === 'en') {
-          var request = new XMLHttpRequest();
-          request.open("GET", "../lang/en.json", false);
-          request.send(null)
-          var json = JSON.parse(request.responseText);
-     }
+function changeText(string, json) {
      for (key in json) {
-          if (key === `category_${string}`) {
-               document.getElementById(`categori_home`).innerHTML = json[key];
+          if (key === `category_${string}` || (key === 'categori_home' && shown === "")) {
+               if (json[key].trim().length > 0) {
+                    document.getElementById(`categori_home`).innerHTML = json[key];
+               } else {
+                    var request = new XMLHttpRequest();
+                    request.open("GET", `../lang/${languagesSF[0]}.json`, false);
+                    request.send(null)
+                    document.getElementById(`categori_home`).innerHTML = JSON.parse(request.responseText)[key];
+               }
                return;
           }
      }
@@ -42,12 +38,19 @@ function changeHold(string) {
           }
           shown = "";
      }
-     changeText(string);
+
+     var request = new XMLHttpRequest();
+     request.open("GET", `../lang/${lang}.json`, false);
+     request.send(null);
+     changeText(shown, JSON.parse(request.responseText));
 }
 
 for (const key of all) {
      document.getElementById(`category_${key}-div`).classList.add("is-hidden");
-     changeText(`${key}`);
+     var request = new XMLHttpRequest();
+     request.open("GET", `../lang/${lang}.json`, false);
+     request.send(null);
+     changeText(`${key}`, JSON.parse(request.responseText));
      document.getElementById(`category_${key}`).addEventListener('click', () => {
           changeHold(`${key}`);
      });
