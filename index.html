@@ -1,87 +1,85 @@
-<html>
+<!DOCTYPE html>
+<html lang="ja">
 
 <head>
-    <title>圭紫のカード</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
-
+    <title>圭紫のカード</title>
     <meta name="theme-color" content="#FEF2E8">
-    <meta content="./img/profile.png" property="og:image">
+    <meta name="description" content="ただのカードサイト">
+    <meta property="og:title" content="圭紫のカード">
+    <meta property="og:description" content="ただのカードサイト">
+    <meta property="og:site_name" content="圭紫">
+    <meta property="og:locale" content="ja">
+    <meta property="og:url" content="https://keishispl.github.io/">
+    <meta property="og:image" content="./img/profile.png">
+    <link rel="canonical" href="https://keishispl.github.io/">
     <link rel="icon" href="./img/profile.png">
     <link rel="apple-touch-icon" sizes="180x180" href="./img/profile.png">
-    <meta content="圭紫のカード" property="og:title">
-    <meta content="ただのカードサイト" property="og:description">
-    <meta content="ただのカードサイト" name="description">
-    <meta name="revisit-after" content="2 days">
-    <meta property="og:locale" content="ja">
-    <link rel="canonical" href="https://keishispl.github.io/">
-    <meta property="og:url" content="https://keishispl.github.io/">
-    <meta property="og:site_name" content="圭紫">
-
     <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;700&display=swap" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" type="text/css"
-        rel="stylesheet">
-    <link href="general.css" type="text/css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+    <link href="index.css" rel="stylesheet">
 </head>
 
 <body>
     <div id="top" class="general">
-        <div class="centerpage" style="z-index: 1; margin-top: -15px;">
-            <img draggable="false"
-                style="width: 100px; height: 100px; border-radius:50%; box-shadow: 0 0 15px 3px gray;"
-                src="./img/profile.png" loading="lazy" data-scanned="true">
-            <div style="padding-top: 20px;"></div>
+        <div class="centerpage" style="margin-top: -15px; z-index: 99;">
+            <img class="image-title" src="./img/profile.png" alt="profile" loading="lazy">
             <div class="unset">
-                <p id="furigana" style="margin-bottom: -20px;">&nbsp;</p>
-                <h2 id="name">&nbsp;</h2>
+                <p id="furigana" style="margin-bottom: -15px;"></p>
+                <h2 id="name"></h2>
             </div>
-            <div style="padding-bottom: 25px;"></div>
-            <img draggable="false" loading="lazy" data-scanned="true" src="https://count.getloli.com/get/@keishispl.github?theme=rule34&darkmode=0">
-            <div style="padding-bottom: 25px;"></div>
-            <a id="category_intro" class="btn long"></a>
-            <a id="category_social" class="btn long"></a>
-            <a id="category_website" class="btn long"></a>
+            <img src="https://count.getloli.com/get/@keishispl.github?theme=rule34&darkmode=0" alt="visitor count"
+                loading="lazy"><br>
+            <div class="buttons">
+                <a id="category_intro" class="btn long"></a>
+                <a id="category_social" class="btn long"></a>
+                <a id="category_website" class="btn long"></a>
+            </div>
         </div>
-        <div class="centerpage">
-            <div style="padding-top: 500px;"></div>
+
+        <div class="centerpage" style="padding-top: 500px;">
             <div id="category_intro-div" class="is-hidden">
-                <p style="font-size: 20px; padding-top: 15px;" id="intro"></p>
+                <p id="intro" style="font-size: 20px;"></p>
             </div>
+
             <div id="category_social-div" class="is-hidden">
-                <div class="buttons" style="left: 0%; right: 0%; top: 0%; bottom: 0%;">
-                    <a href="https://www.youtube.com/@keishispl" class="btn" target="_blank">&nbsp;<i
-                            class="fab fa-youtube"></i>&nbsp;</a>
-                    <a href="https://twitter.com/keishispl" class="btn" target="_blank">&nbsp;<i
-                            class="fab fa-x-twitter"></i>&nbsp;</a>
-                    <a href="https://bsky.app/profile/keishispl.bsky.social" class="btn" target="_blank">&nbsp;<i
-                            class="fab fa-bluesky"></i>&nbsp;</a>
-                    <a href="https://github.com/keishispl" class="btn" target="_blank">&nbsp;<i
-                            class="fab fa-github"></i>&nbsp;</a>
+                <div class="buttons">
+                    <a href="https://www.youtube.com/@keishispl" class="btn" target="_blank"><i
+                            class="fab fa-youtube"></i></a>
+                    <a href="https://twitter.com/keishispl" class="btn" target="_blank"><i
+                            class="fab fa-x-twitter"></i></a>
+                    <a href="https://bsky.app/profile/keishispl.bsky.social" class="btn" target="_blank"><i
+                            class="fab fa-bluesky"></i></a>
+                    <a href="https://github.com/keishispl" class="btn" target="_blank"><i class="fab fa-github"></i></a>
                 </div>
             </div>
-            <div id="category_website-div" class="is-hidden">
-                <div style="padding-top: 60px;"></div>
-                <div class="buttons" style="left: 0%; right: 0%; top: 0%; bottom: 0%;">
+
+            <div id="category_website-div" class="is-hidden" style="padding-top: 50px;">
+                <div class="buttons">
                     <a href="japbdict" id="japbdict" class="btn long" target="_blank"></a>
                     <a href="maidkouciana" id="maidkouciana" class="btn long2" target="_blank"></a>
                     <a href="speedrun" id="speedrun" class="btn long2" target="_blank"></a>
                 </div>
-                <div class="buttons" style="left: 0%; right: 0%; top: 0%; bottom: 0%;">
+                <div class="buttons">
                     <a href="taikofumen" id="taikofumen" class="btn long" target="_blank"></a>
                     <a href="tja-editor" id="tjaeditor" class="btn long" target="_blank"></a>
                 </div>
             </div>
         </div>
+
         <div class="bottom middle">
-            <p style="font-size:30px;" id="categori_home"></p>
+            <p id="categori_home" style="font-size: 30px;"></p>
         </div>
+
         <div class="bottom left">
             <form>
-                <select id="lang-switch">
-                </select>
+                <select id="lang-switch"></select>
             </form>
         </div>
-        <div class="bottom right"><a target="_blank" href="https://www.deviantart.com/u-joe" id="illustration" style="cursor: default;"></a>
+
+        <div class="bottom right">
+            <a href="https://www.deviantart.com/u-joe" id="illustration" target="_blank"></a>
         </div>
 
         <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
