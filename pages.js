@@ -19,7 +19,7 @@ function changeText(string) {
      }
      for (key in json) {
           if (key === `category_${string}`) {
-               document.getElementById(`location`).innerHTML = json[key];
+               document.getElementById(`categori_home`).innerHTML = json[key];
                return;
           }
      }
