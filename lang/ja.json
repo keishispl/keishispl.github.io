@@ -7,9 +7,9 @@
      "name": "圭紫",
      "furigana": "ケイ&nbsp;シ&nbsp;",
      "intro": "独学のコーダーです、空き時間にコーディングしています。",
-     "japbdict": "初心者日本語辞典",
-     "taikofumen": "太鼓創作譜面",
-     "tjaeditor": "TJA Editor",
-     "speedrun": "タイムアタックゲーム",
-     "maidkouciana": "メイドコウシアナ"
+     "link_japbdict": "初心者日本語辞典",
+     "link_taikofumen": "太鼓創作譜面",
+     "link_tjaeditor": "TJA Editor",
+     "link_speedrun": "タイムアタックゲーム",
+     "link_maidkouciana": "メイドコウシアナ"
 }

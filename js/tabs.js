@@ -50,5 +50,3 @@ for (const key of all) {
           changeHold(`${key}`);
      });
 };
-
-langFunction(readLangJSON(lang));

@@ -7,9 +7,9 @@
      "name": "Keishi",
      "furigana": "&nbsp;",
      "intro": "I'm a self-taught developer, and I do coding in my spare time.",
-     "japbdict": "",
-     "taikofumen": "Taiko Charts",
-     "tjaeditor": "",
-     "speedrun": "Speedrun Game",
-     "maidkouciana": "MaidKouciana"
+     "link_japbdict": "",
+     "link_taikofumen": "Taiko Charts",
+     "link_tjaeditor": "",
+     "link_speedrun": "Speedrun Game",
+     "link_maidkouciana": "MaidKouciana"
 }

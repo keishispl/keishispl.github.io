@@ -11,3 +11,7 @@ function readSettingJSON(file) {
      request.send(null);
      return JSON.parse(request.responseText);
 }
+
+setTimeout(() => {
+     langFunction(readLangJSON(lang));
+}, 200)
