@@ -3,17 +3,11 @@
           "id": "japbdict",
           "link": "japbdict",
           "group": 0,
-          "long": false
+          "long": true
      },
      {
           "id": "maidkouciana",
           "link": "maidkouciana",
-          "group": 0,
-          "long": true
-     },
-     {
-          "id": "speedrun",
-          "link": "speedrun",
           "group": 0,
           "long": true
      },
