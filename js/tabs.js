@@ -1,9 +1,16 @@
-const all = [
-     "intro",
-     "social",
-     "website"
-];
+const all = readSettingJSON("tabs");
+console.log(all)
+const tablistElement = document.getElementById("tabslist");
+all.forEach((tab) => {
+     var tabElement = document.createElement("a");
+     tabElement.id = "category_" + tab;
+     tabElement.classList.add("btn");
+     tabElement.classList.add("long");
+     tablistElement.appendChild(tabElement);
+})
 shown = "";
+
+langFunction(readLangJSON(lang));
 
 function changeText(string, json) {
      for (key in json) {
