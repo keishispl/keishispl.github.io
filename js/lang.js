@@ -1,18 +1,16 @@
 const s = "_"
 
-const languages = readSettingJSON("lang")
-
 const languagesSF = []
 const languagesNM = []
 const languagesTITLE = []
-languages.forEach((lang) => {
-     languagesSF.push(lang.id)
-     languagesNM.push(lang.name)
-     languagesTITLE.push(lang.title)
+readSettingJSON("lang").forEach((langu) => {
+     languagesSF.push(langu.id)
+     languagesNM.push(langu.name)
+     languagesTITLE.push(langu.title)
 
      var option = document.createElement('option')
-     option.value = lang.id
-     option.textContent = lang.name
+     option.value = langu.id
+     option.textContent = langu.name
      document.getElementById("lang-switch").appendChild(option)
 })
 
@@ -42,7 +40,6 @@ if (languagesSF.includes(urlParams.get('lang'))) {
      var lang = getCookie("lang")
 }
 
-
 function langFunction(json) {
      for (let key in json) {
           if (json[key].trim().length > 0) {
@@ -52,10 +49,6 @@ function langFunction(json) {
           }
      }
 }
-
-$('[lang]').hide();
-$(`[lang="${lang}"]`).show();
-langFunction(readLangJSON(lang));
 
 document.getElementById('lang-switch').selectedIndex = languagesSF.findIndex((obj) => obj === lang)
 document.title = languagesTITLE[languagesSF.findIndex((obj) => obj === lang)]

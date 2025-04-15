@@ -1,0 +1,20 @@
+.kic {
+     height: 16px;
+     width: 16px;
+     display: block;
+     margin-top: auto;
+     margin-bottom: auto;
+     margin-left: -8px;
+     margin-right: auto;
+     top: 50%;
+     left: 50%;
+     bottom: 50%;
+     right: 50%;
+     position: absolute;
+}
+
+
+.ki-modrinth {
+     background: url('img/icon/modrinth.svg');
+     filter: invert(100%);
+}

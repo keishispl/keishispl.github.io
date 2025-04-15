@@ -1,5 +1,4 @@
 const all = readSettingJSON("tabs");
-console.log(all)
 const tablistElement = document.getElementById("tabslist");
 all.forEach((tab) => {
      var tabElement = document.createElement("a");
@@ -9,8 +8,6 @@ all.forEach((tab) => {
      tablistElement.appendChild(tabElement);
 })
 shown = "";
-
-langFunction(readLangJSON(lang));
 
 function changeText(string, json) {
      for (key in json) {
@@ -53,3 +50,5 @@ for (const key of all) {
           changeHold(`${key}`);
      });
 };
+
+langFunction(readLangJSON(lang));
