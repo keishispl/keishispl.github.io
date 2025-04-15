@@ -1,31 +1,27 @@
 const s = "_"
 
-const languages = [
-     `ja${s}日本語${s}圭紫のカード`,
-     `en${s}English${s}Keishi's Card`,
-     `zh-td${s}繁體中文${s}Kacey的網站`,
-     `zh-hk${s}廣東話${s}Kacey嘅網頁`
-]
+const languages = readSettingJSON("lang")
 
 const languagesSF = []
 const languagesNM = []
 const languagesTITLE = []
-for (let i = 0; i < languages.length; i++) {
-     languagesSF.push(languages[i].split(s)[0])
-     languagesNM.push(languages[i].split(s)[1].split(s)[0])
-     languagesTITLE.push(languages[i].split(s)[2])
+languages.forEach((lang) => {
+     languagesSF.push(lang.id)
+     languagesNM.push(lang.name)
+     languagesTITLE.push(lang.title)
 
      var option = document.createElement('option')
-     option.value = languages[i].split(s)[0]
-     option.innerHTML = languages[i].split(s)[1].split(s)[0]
+     option.value = lang.id
+     option.textContent = lang.name
      document.getElementById("lang-switch").appendChild(option)
-}
+})
 
 const urlParams = new URLSearchParams(window.location.search)
 if (languagesSF.includes(urlParams.get('lang'))) {
      var lang = urlParams.get('lang')
-     document.cookie = `lang=${urlParams.get('lang')};`
      history.pushState(null, "", location.href.split("?")[0]);
+
+     document.cookie = `lang=${urlParams.get('lang')};`
 } else {
      function getCookie(cname) {
           let name = cname + "=";
@@ -52,31 +48,21 @@ function langFunction(json) {
           if (json[key].trim().length > 0) {
                document.getElementById(key).innerHTML = json[key];
           } else {
-               var request = new XMLHttpRequest();
-               request.open("GET", `../lang/${languagesSF[0]}.json`, false);
-               request.send(null)
-               document.getElementById(key).innerHTML = JSON.parse(request.responseText)[key];
+               document.getElementById(key).innerHTML = readLangJSON(languagesSF[0])[key];
           }
      }
 }
 
 $('[lang]').hide();
 $(`[lang="${lang}"]`).show();
-
-var request = new XMLHttpRequest();
-request.open("GET", `../lang/${lang}.json`, false);
-request.send(null)
-langFunction(JSON.parse(request.responseText));
+langFunction(readLangJSON(lang));
 
 document.getElementById('lang-switch').selectedIndex = languagesSF.findIndex((obj) => obj === lang)
 document.title = languagesTITLE[languagesSF.findIndex((obj) => obj === lang)]
 
 $('#lang-switch').change(function () {
      var switchedLang = $(this).val();
-     var request = new XMLHttpRequest();
-     request.open("GET", `../lang/${switchedLang}.json`, false);
-     request.send(null)
-     var json = JSON.parse(request.responseText);
+     var json = readLangJSON(switchedLang);
 
      langFunction(json);
      changeText(shown, json)

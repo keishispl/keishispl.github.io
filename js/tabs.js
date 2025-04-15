@@ -11,10 +11,7 @@ function changeText(string, json) {
                if (json[key].trim().length > 0) {
                     document.getElementById(`categori_home`).innerHTML = json[key];
                } else {
-                    var request = new XMLHttpRequest();
-                    request.open("GET", `../lang/${languagesSF[0]}.json`, false);
-                    request.send(null)
-                    document.getElementById(`categori_home`).innerHTML = JSON.parse(request.responseText)[key];
+                    document.getElementById(`categori_home`).innerHTML = readLangJSON(languagesSF[0])[key];
                }
                return;
           }
@@ -39,18 +36,12 @@ function changeHold(string) {
           shown = "";
      }
 
-     var request = new XMLHttpRequest();
-     request.open("GET", `../lang/${lang}.json`, false);
-     request.send(null);
-     changeText(shown, JSON.parse(request.responseText));
+     changeText(shown, readLangJSON(lang));
 }
 
 for (const key of all) {
      document.getElementById(`category_${key}-div`).classList.add("is-hidden");
-     var request = new XMLHttpRequest();
-     request.open("GET", `../lang/${lang}.json`, false);
-     request.send(null);
-     changeText(`${key}`, JSON.parse(request.responseText));
+     changeText(`${key}`, readLangJSON(lang));
      document.getElementById(`category_${key}`).addEventListener('click', () => {
           changeHold(`${key}`);
      });

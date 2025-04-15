@@ -24,13 +24,13 @@
 <body>
     <div id="top" class="general">
         <div class="centerpage" style="margin-top: -15px; z-index: 99;">
-            <img class="image-title" src="./img/profile.png" alt="profile" loading="lazy">
+            <img class="image-title" src="./img/profile.png" alt="profile" loading="lazy" draggable="false">
             <div class="unset">
                 <p id="furigana" style="margin-bottom: -15px;"></p>
                 <h2 id="name"></h2>
             </div>
             <img src="https://count.getloli.com/get/@keishispl.github?theme=rule34&darkmode=0" alt="visitor count"
-                loading="lazy"><br>
+                loading="lazy" draggable="false"><br>
             <div class="buttons">
                 <a id="category_intro" class="btn long"></a>
                 <a id="category_social" class="btn long"></a>
@@ -83,6 +83,7 @@
         </div>
 
         <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+        <script src="js/readJSON.js"></script>
         <script src="js/lang.js"></script>
         <script src="js/tabs.js"></script>
     </div>
