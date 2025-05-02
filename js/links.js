@@ -1,25 +1,40 @@
-readSettingJSON("links").forEach((link) => {
-     if (document.getElementById('website_group-'+link.group) === null) {
-          var group = document.createElement("div");
-          group.id = 'website_group-' + link.group;
-          group.classList.add("buttons");
-          document.getElementById("category_website-div").appendChild(group);
-     } else {
-          var group = document.getElementById('website_group-' + link.group)
-     }
+/**
+ * Reads the links from the JSON file and generates HTML elements for them.
+ *
+ * Links are created as anchor elements with the class "btn" and an ID of "link_<linkId>".
+ * Each link is appended to a group div with an ID of "website_group-<groupId>".
+ * If the group div does not exist, it is created and appended to the "category_website-div".
+ *
+ * @param {String} filename The filename of the JSON file containing the links.
+ */
+function generateLinks(filename) {
+     // Read link data from the specified JSON file
+     const linkData = readSettingJSON(filename);
 
-     var linkElement = document.createElement("a");
-     linkElement.href = link.link;
-     linkElement.id = "link_"+link.id;
-     linkElement.target = "_blank";
-     linkElement.classList.add("btn");
+     // Iterate through each link in the data
+     linkData.forEach((link) => {
+          // Get the group element where the link should be appended
+          let groupElement = document.getElementById(`website_group-${link.group}`);
 
-     if (link.long === true) {
-          linkElement.classList.add("long2");
+          // If the group element does not exist, create it
+          if (groupElement === null) {
+               groupElement = document.createElement("div");
+               groupElement.id = `website_group-${link.group}`;
+               groupElement.classList.add("buttons");
+               document.getElementById("category_website-div").appendChild(groupElement);
+          }
 
-     } else {
-          linkElement.classList.add("long");
-     }
+          // Create the anchor element for the link
+          const anchorElement = document.createElement("a");
+          anchorElement.href = link.link;
+          anchorElement.id = `link_${link.id}`;
+          anchorElement.target = "_blank";
+          anchorElement.classList.add("btn", link.long ? "long2" : "long");
 
-     group.appendChild(linkElement);
-})
+          // Append the anchor element to the group element
+          groupElement.appendChild(anchorElement);
+     });
+}
+
+// Generate links using the "links" JSON file
+generateLinks("links");
