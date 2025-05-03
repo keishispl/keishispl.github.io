@@ -94,4 +94,6 @@ $('#lang-switch').change(function () {
      document.cookie = `lang=${switchedLang};`
      // Set the title of the page to the selected language
      document.title = languagesTITLE[languagesSF.findIndex((obj) => obj === switchedLang)]
+     // Reset the links on the page when the language is changed
+     resetLinks(json, switchedLang);
 });
