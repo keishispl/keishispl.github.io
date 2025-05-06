@@ -15,7 +15,9 @@
           "id": "eightball",
           "link": "eightball",
           "lang": {
-               "ja": "eightball/ja"
+               "ja": "eightball/ja",
+               "zh-td": "eightball/zh",
+               "zh-hk": "eightball/zh"
           },
           "group": 0,
           "long": true
