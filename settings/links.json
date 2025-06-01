@@ -23,6 +23,12 @@
           "long": true
      },
      {
+          "id": "keishitlstuff",
+          "link": "keishitlstuff",
+          "group": 0,
+          "long": true
+     },
+     {
           "id": "taikofumen",
           "link": "taikofumen",
           "group": 1,
