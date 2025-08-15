@@ -1,0 +1,19 @@
+setting.title: 圭紫のカード（ベータ）
+
+# Language keys
+title: 圭紫
+furigana: けいし
+subtitle: カードへようこそ
+
+intro: 自己紹介
+intro.text: 独学のコーダーです、空き時間にコーディングしています<br>知てるな言語：Python、JavaScript、Java、HTML、CSS<br><br>音ゲーが好き<br>プロセカ、ガルパ、ユメステ、太鼓の達人、東方ダンマグ、とosu!をプレイする<br><br>東方が大好きです<br><b>レミリア・スカーレット</b>が推しです
+
+mokuji: 目次
+mokuji.list#farmersdelightexpansion: Farmer's Delight Expansion
+
+farmersdelightexpansion: Farmer's Delight Expansion
+farmersdelightexpansion.text: 「新しい食料や作物でFarmer's Delightを高める！」<br>【英語版のみ】
+farmersdelightexpansion.link: Modrinthで詳細を見る
+
+footer: keishisplが作成したサイト
+source-code: ソースコードを見る

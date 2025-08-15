@@ -1,0 +1,11 @@
+.kic {
+     height: 24px;
+     width: 24px;
+     display: block;
+}
+
+
+.ki-modrinth {
+     background: url('./shashin/icon/modrinth.svg');
+     filter: invert(85%);
+}

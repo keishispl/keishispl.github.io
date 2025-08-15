@@ -1,0 +1,19 @@
+setting.title: Keishi's Card (BETA)
+
+# Language keys
+title: Keishi
+furigana: null
+subtitle: Welcome to my card
+
+intro: Self Introduction
+intro.text: I'm a self-taught developer, I code when I'm free.<br>Languages; Python, JavaScript, Java, HTML, CSS<br><br>I like rhythm games.<br>I play ProSeka, BanDori, WDS, Taiko, Touhou Danmaku and osu!.<br><br>I love Touhou!<br>My favourite character is <b>Remilia Scarlet</b>.
+
+mokuji: Table of Contents
+mokuji.list#farmersdelightexpansion: Farmer's Delight Expansion
+
+farmersdelightexpansion: Farmer's Delight Expansion
+farmersdelightexpansion.text: "New foodstuffs and crops to enhance Farmer's Delight!"
+farmersdelightexpansion.link: View details on Modrinth
+
+footer: Created by keishispl
+source-code: View the source code
