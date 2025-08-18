@@ -122,7 +122,9 @@ footer {
           }
      }
 
-     >p>#source-code {
+     >p>#source-code,
+     >p>#old {
+          cursor: pointer;
           text-decoration: none;
           color: var(--font-color);
           font-size: 16px;

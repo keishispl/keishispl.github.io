@@ -31,6 +31,11 @@
     bottom: 10px
 }
 
+.top {
+    position: absolute;
+    top: 10px
+}
+
 .middle {
     align-self: center;
     left: 0;
