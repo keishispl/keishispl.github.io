@@ -1,6 +1,7 @@
 const langList = {
      ja: "日本語",
-     en: "English"
+     en: "English",
+     zh: "繁體中文"
 };
 
 /**
@@ -92,6 +93,7 @@ document.getElementById("lang-switch").addEventListener('change', () => {
      langSwitchText(langFile);
      linkWrite();
      mokujiWrite();
+     minisiteWrite();
      document.cookie = `lang=${lang};`;
 });
 

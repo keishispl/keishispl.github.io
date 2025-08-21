@@ -9,7 +9,22 @@ intro: Self Introduction
 intro.text: I'm a self-taught developer, I code when I'm free.<br>Languages; Python, JavaScript, Java, HTML, CSS<br><br>I like rhythm games.<br>I play ProSeka, BanDori, WDS, Taiko, Touhou Danmaku and osu!.<br><br>I love Touhou!<br>My favourite character is <b>Remilia Scarlet</b>.
 
 mokuji: Table of Contents
+mokuji.list#knockdc: KnockDC
 mokuji.list#farmersdelightexpansion: Farmer's Delight Expansion
+
+minisite: Mini Site
+minisite.text: The site list
+minisite.visit: Visit the site
+minisite.text#japbdict: Beginner Japanese Dictionary
+minisite.text#maidkouciana: MaidKouciana
+minisite.text#eightball: Eightball
+minisite.text#tlstuff: Keishi TL Stuff
+minisite.text#fumen: Custom Charts (Japanese only)
+minisite.text#tja-editor: TJA Editor
+
+knockdc: KnockDC
+knockdc.text: A Discord Minecraft integration plugin
+knockdc.link: View details on the site
 
 farmersdelightexpansion: Farmer's Delight Expansion
 farmersdelightexpansion.text: "New foodstuffs and crops to enhance Farmer's Delight!"

@@ -1,0 +1,35 @@
+setting.title: 圭紫的Card（Beta）
+
+# 語言key
+title: 圭紫
+furigana: Keishi
+subtitle: 歡迎來到我的Card網頁
+
+intro: 自己介紹
+intro.text: 我中文退學了（笑）救救我ㄨㄨㄨ⋯<br>我是自學的程式設計師、有空或無聊時會編寫程式碼<br>語言：Python、JavaScript、Java、HTML、CSS<br><br>我喜歡節奏遊戲<br>我玩世界計畫、少女樂團派對、World Dai Star、太鼓之達人、東方彈幕神樂、和osu!等<br><br>我超愛東方<br>我推的角色是<b>蕾米莉亞・斯卡蕾特</b>
+
+mokuji: 目次
+mokuji.list#knockdc: KnockDC
+mokuji.list#farmersdelightexpansion: Farmer's Delight Expansion
+
+minisite: 迷你網站
+minisite.text: 網站清單
+minisite.visit: 前往網站
+minisite.text#japbdict: 初級日語字典【只限英語版】
+minisite.text#maidkouciana: 女僕庫西亞納【只限英語版】
+minisite.text#eightball: 八球占卜
+minisite.text#tlstuff: Keishi TL Stuff【只限英語版】
+minisite.text#fumen: 創作譜面【只限日語版】
+minisite.text#tja-editor: TJA Editor【只限英語版】
+
+knockdc: KnockDC
+knockdc.text: Discord和Minecraft的整合插件<br>【只限英語版】
+knockdc.link: 在網頁看詳細
+
+farmersdelightexpansion: Farmer's Delight Expansion
+farmersdelightexpansion.text: 「在Farmer's Delight中增加了新的食物和農作物！」<br>【只限英語版】
+farmersdelightexpansion.link: 在Modrinth看詳細
+
+old: 看網頁的舊版本
+footer: keishispl作成的網頁
+source-code: 看原始碼

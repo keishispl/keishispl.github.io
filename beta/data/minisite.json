@@ -1,0 +1,41 @@
+[
+     {
+          "id": "japbdict",
+          "link": {
+               "default": "japbdict"
+          }
+     },
+     {
+          "id": "maidkouciana",
+          "link": {
+               "default": "maidkouciana"
+          }
+     },
+     {
+          "id": "eightball",
+          "link": {
+               "default": "eightball",
+               
+               "ja": "eightball/ja",
+               "zh": "eightball/zh"
+          }
+     },
+     {
+          "id": "tlstuff",
+          "link": {
+               "default": "tlstuff"
+          }
+     },
+     {
+          "id": "fumen",
+          "link": {
+               "default": "fumen"
+          }
+     },
+     {
+          "id": "tja-editor",
+          "link": {
+               "default": "tja-editor"
+          }
+     }
+]

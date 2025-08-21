@@ -5,5 +5,12 @@
                "default": "https://modrinth.com/mod/farmers-delight-expansion"
           },
           "_blank": true
+     },
+     {
+          "id": "knockdc.link",
+          "link": {
+               "default": "https://KnockIT-MC.github.io/KnockDC"
+          },
+          "_blank": true
      }
 ]
