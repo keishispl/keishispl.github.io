@@ -17,21 +17,19 @@ function readJSON(file) {
 function mokujiWrite() {
      waitFor("langFile", function () {
           var list = document.getElementById("mokuji.list");
-
-          list.innerHTML = "";
+          var objects = [];
 
           readJSON("mokuji").forEach(id => {
-               var mokujiElement = document.createElement("a");
-               mokujiElement.id = "mokuji.list#" + id;
-               mokujiElement.classList.add("btn");
-               mokujiElement.innerHTML = (langFile["mokuji.list#" + id] === "" ? null : langFile["mokuji.list#" + id]) ?? "???";
-               list.appendChild(mokujiElement);
-               mokujiElement.addEventListener('click', () => {
+               function click() {
                     try {
                          document.getElementById("div#" + id).scrollIntoView({ behavior: "smooth" });
                     } catch (e) { };
-               });
+               }
+               var mokujiElement = <a onClick={click} id={"mokuji.list#" + id} className="btn">{(langFile["mokuji.list#" + id] === "" ? null : langFile["mokuji.list#" + id]) ?? "???"}</a>
+               objects.push(mokujiElement);
           });
+
+          ReactDOM.render(objects, list);
      });
 }
 
