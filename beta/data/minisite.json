@@ -1,5 +1,11 @@
 [
      {
+          "id": "date",
+          "link": {
+               "default": "date"
+          }
+     },
+     {
           "id": "japbdict",
           "link": {
                "default": "japbdict"
