@@ -5,6 +5,4 @@ setTimeout(() => {
      document.querySelector("footer").classList.remove("hidden");
 }, 1250);
 
-onload = () => {
-     document.getElementById("loading").style.opacity = 0;
-}
+document.getElementById("loading").style.opacity = 0;
