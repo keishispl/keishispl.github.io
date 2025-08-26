@@ -2,7 +2,10 @@
      {
           "id": "date",
           "link": {
-               "default": "date"
+               "default": "date",
+
+               "en": "date/en",
+               "zh": "date/zh"
           }
      },
      {
