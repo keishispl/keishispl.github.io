@@ -21,7 +21,7 @@ function minisiteWrite() {
 
           readJSON("minisite").forEach(item => {
                var id = "minisite.list#" + item.id;
-               var href = "../" + (item.link[lang] ?? item.link['default']);
+               var href = (item.link[lang] ?? item.link['default']);
                var minisiteTextElement = <p id={id}>{(langFile["minisite.text#"] === "" ? null : langFile["minisite.text#" + item.id]) ?? "???"}</p>;
                var minisiteElement = <a id={id} className="btn" href={href} target="_blank">{(langFile["minisite.visit"] === "" ? null : langFile["minisite.visit"]) ?? "???"} <i className="fa-solid fa-up-right-from-square"></i></a>;
                objects.push(minisiteTextElement, minisiteElement);

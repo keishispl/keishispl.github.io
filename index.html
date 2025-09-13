@@ -1,80 +1,65 @@
-<!DOCTYPE html>
-<html lang="ja">
+<html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
-    <title>圭紫のカード</title>
-    <meta name="theme-color" content="#FEF2E8">
-    <meta name="description" content="ただのカードサイト">
-    <meta property="og:title" content="圭紫のカード">
-    <meta property="og:description" content="ただのカードサイト">
-    <meta property="og:site_name" content="圭紫">
-    <meta property="og:locale" content="ja">
-    <meta property="og:url" content="https://keishispl.github.io/">
-    <meta property="og:image" content="./img/profile.png">
-    <link rel="canonical" href="https://keishispl.github.io/">
-    <link rel="icon" href="./img/profile.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="./img/profile.png">
-    <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;700&display=swap" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
-    <link href="icons.css" rel="stylesheet">
-    <link href="index.css" rel="stylesheet">
+     <title>圭紫のカード</title>
+     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+     <link href="icons.css" rel="stylesheet">
+     <link href="fonts/font.css" rel="stylesheet">
+     <link rel="stylesheet" href="index.css">
+     <script src="https://unpkg.com/react@16.0.0/umd/react.production.min.js"></script>
+     <script src="https://unpkg.com/react-dom@16.0.0/umd/react-dom.production.min.js"></script>
+     <script src="https://unpkg.com/@babel/standalone@7.28.3/babel.min.js"></script>
 </head>
 
 <body>
-    <div id="top" class="general">
-        <div class="centerpage" style="margin-top: -15px; z-index: 99;">
-            <img class="image-title" src="./img/profile.png" alt="profile" loading="lazy" draggable="false">
-            <div class="unset">
-                <p id="furigana" style="margin-bottom: -15px;"></p>
-                <h2 id="name"></h2>
-            </div>
-            <img src="https://count.getloli.com/@keishispl.github?theme=rule34&darkmode=0" alt="visitor count"
-                loading="lazy" draggable="false"><br>
-            <div class="buttons" id="tabslist">
-            </div>
-        </div>
-
-        <div class="centerpage" style="padding-top: 500px;">
-            <div id="category_intro-div" class="is-hidden">
-                <p id="intro" style="font-size: 20px;"></p>
-            </div>
-
-            <div id="category_social-div" class="is-hidden">
-                <div class="buttons" id="sns">
-                </div>
-            </div>
-
-            <div id="category_website-div" class="is-hidden" style="padding-top: 50px;">
-            </div>
-        </div>
-
-        <div class="bottom middle">
-            <p id="categori_home" style="font-size: 30px;"></p>
-        </div>
-
-        <div class="bottom left">
-            <form>
-                <select id="lang-switch"></select>
-            </form>
-        </div>
-
-        <div class="bottom right">
-            <a href="https://www.deviantart.com/u-joe" id="illustration" target="_blank"></a>
-        </div>
-
-        <div class="top right">
-            <a href="beta" id="beta"></a>
-        </div>
-    </div>
-
-    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
-    <script src="js/readJSON.js"></script>
-    <script src="js/lang.js"></script>
-    <script src="js/tabs.js"></script>
-    <script src="js/links.js"></script>
-    <script src="js/sns.js"></script>
+     <div id="loading"></div>
+     <header>
+          <h2 class="ls" id="furigana"></h2>
+          <h1 class="ls" id="title"></h1>
+          <p class="ls" id="subtitle"></p>
+     </header>
+     <main class="hidden">
+          <div class="full" style="background-color: rgb(3, 3, 10);">
+               <h1 class="ls" id="intro"></h1>
+               <p class="ls" id="intro.text"></p>
+               <h1>SNS</h1>
+               <div id="sns"></div>
+               <h1 class="ls" id="mokuji" style="margin-top: 50px;"></h1>
+               <div class="lsb" id="mokuji.list" style="margin: 0 0 25px 0;"></div>
+          </div>
+          <div class="background" style="background-image: url('img/wallpaper/background_phone.png');"
+               id="div#minisite">
+               <h1 class="ls" id="minisite"></h1>
+               <p class="ls" id="minisite.text"></p>
+               <div class="lsb" id="minisite.list" style="margin: 0 0 25px 0;"></div>
+          </div>
+          <div class="background" style="background-color: rgb(13, 10, 29);"
+               id="div#knockdc">
+               <h1 class="ls" id="knockdc"></h1>
+               <p class="ls" id="knockdc.text"></p>
+               <a class="lsr" style="margin: 35px 0 20px 0; padding: 0 25px;" id="knockdc.link"></a>
+          </div>
+          <div class="background" style="background-image: url('img/wallpaper/background_dark.jpeg');"
+               id="div#farmersdelightexpansion">
+               <h1 class="ls" id="farmersdelightexpansion"></h1>
+               <p class="ls" id="farmersdelightexpansion.text"></p>
+               <img src="shashin/farmersdelightexpansion.png" loading="lazy" draggable="false">
+               <a class="lsr" style="margin: 35px 0 20px 0; padding: 0 25px;" id="farmersdelightexpansion.link"></a>
+          </div>
+     </main>
+     <footer class="hidden">
+          <img src="https://count.getloli.com/@keishispl.github?theme=rule34&darkmode=0" loading="lazy"
+               draggable="false" style="margin: 20px 0; max-width: calc(100vw - 50px);">
+          <p class="ls" id="footer"></p>
+          <p><a class="ls" id="source-code" href="https://github.com/keishispl/keishispl.github.io"></a></p>
+          <select id="lang-switch" class="btn" style="height: 40px;"></select>
+     </footer>
+     <script type="text/babel" src="js/index.jsx"></script>
+     <script type="text/babel" src="js/lang.jsx"></script>
+     <script type="text/babel" src="js/mokuji.jsx"></script>
+     <script type="text/babel" src="js/minisite.jsx"></script>
+     <script type="text/babel" src="js/rinku.jsx"></script>
+     <script type="text/babel" src="js/sns.jsx"></script>
 </body>
 
 </html>

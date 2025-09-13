@@ -1,4 +1,4 @@
-setting.title: Keishi's Card (BETA)
+setting.title: Keishi's Card
 
 # Language keys
 title: Keishi
@@ -31,6 +31,5 @@ farmersdelightexpansion: Farmer's Delight Expansion
 farmersdelightexpansion.text: "New foodstuffs and crops to enhance Farmer's Delight!"
 farmersdelightexpansion.link: View details on Modrinth
 
-old: View the old version
 footer: Created by keishispl
 source-code: View the source code
